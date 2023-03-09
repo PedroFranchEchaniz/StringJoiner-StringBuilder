@@ -45,9 +45,11 @@ public class Principal {
 		System.out.println("------StringBuilder------");
 		
 		StringBuilder sb = new StringBuilder("Pedro");
-			
+		boolean verdad = true;	
 		sb.append(" El mejor del mundo");
 		
+		System.out.println(sb);
+		sb.append(verdad);
 		System.out.println(sb);
 		
 	}
