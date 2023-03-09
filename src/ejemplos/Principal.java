@@ -7,6 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		System.out.println("------StringJoiner------");
 		String nombre = "Lolo Pedro Angel";
 		
 		StringJoiner sj = new StringJoiner(":");
@@ -14,7 +15,7 @@ public class Principal {
 		sj.add("Pedro");
 		sj.add("Angel");
 		sj.add("Fran");
-		System.out.println("-------------");
+		
 		System.out.println(sj);
 		
 		
@@ -37,6 +38,18 @@ public class Principal {
 		System.out.println(sj3);
 		System.out.println("-------------");
 		System.out.println(sj3.toString());
+		
+		System.out.println("\n");
+		System.out.println("\n");
+		
+		System.out.println("------StringBuilder------");
+		
+		StringBuilder sb = new StringBuilder("Pedro");
+			
+		sb.append(" El mejor del mundo");
+		
+		System.out.println(sb);
+		
 	}
 
 }
