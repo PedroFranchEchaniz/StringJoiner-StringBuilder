@@ -44,13 +44,38 @@ public class Principal {
 		
 		System.out.println("------StringBuilder------");
 		
-		StringBuilder sb = new StringBuilder("Pedro");
-		boolean verdad = true;	
-		sb.append(" El mejor del mundo");
+		StringBuilder sb = new StringBuilder (); 
+		StringBuilder sb2 = new StringBuilder (20);
+		StringBuilder sb3 = new StringBuilder ('f');
+		StringBuilder sb4 = new StringBuilder ("Pedro");
+		StringBuilder sb5 = new StringBuilder ("Paco");
 		
-		System.out.println(sb);
-		sb.append(verdad);
-		System.out.println(sb);
+		char c [] =   {'a', 'b', 'c', 'd', 'e'};
+		String s = "Franch";
+		
+		sb4.append(c);		
+		System.out.println(sb4);
+		
+		
+		System.out.println(sb2.append(c, 2, 2));
+		
+		
+		sb3.append(c, 0, 5);
+		System.out.println(sb3); 
+		
+		sb4.append(s.toLowerCase(), 0, 3);
+		System.out.println(sb4);
+		
+		
+		System.out.println(sb5);
+		
+		System.out.println(sb5.capacity());
+		System.out.println(sb3.capacity());
+		
+		System.out.println(sb5.charAt(3));
+		
+		System.out.println(sb5.codePointAt(3));
+		
 		
 	}
 
