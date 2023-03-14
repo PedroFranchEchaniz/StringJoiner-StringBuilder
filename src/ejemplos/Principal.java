@@ -50,7 +50,13 @@ public class Principal {
 		StringBuilder sb4 = new StringBuilder ("Pedro");
 		StringBuilder sb5 = new StringBuilder ("Paco");
 		
+		
+		
+		int numero;
+		
 		char c [] =   {'a', 'b', 'c', 'd', 'e'};
+		
+		char c2[] = new char [10];
 		String s = "Franch";
 		
 		sb4.append(c);		
@@ -76,7 +82,26 @@ public class Principal {
 		
 		System.out.println(sb5.codePointAt(3));
 		
+		numero = sb5.compareTo(sb5);
 		
+		System.out.println(numero);
+		System.out.println(sb5);
+		sb5.delete(0,2);
+		System.out.println(sb5);
+		
+		
+		System.out.println(sb4);
+		sb4.deleteCharAt(1);
+		System.out.println(sb4);
+		
+		sb4.getChars(0, 5, c2, 1);
+		System.out.println(c2);		
+		
+		System.out.println(sb4.indexOf("d"));
+		System.out.println(sb4.indexOf("Pdroabcdefra"));
+		
+		sb4.insert(2, c2, 3, 4);
+		System.out.println(sb4);
 	}
 
 }
