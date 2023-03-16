@@ -1,31 +1,33 @@
 package ejemploPractico;
 
+import java.util.StringJoiner;
+
 public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		StringBuilder texto = new StringBuilder("coñtraseña");
-		Texto t1 = new Texto(texto);
-
-		System.out.println(t1.separarLetras());
-		char[] aux = new char[texto.length()];
-		int [] listaIndices = new int [texto.length()];
-
-		aux = t1.separarLetras();
-
-		System.out.println(t1.BuscarNio());
-		System.out.println(aux[2]);
-
-		for (int i = 0; i < t1.getContenido().length(); i++) {
-			int numero= 0;
-			if (aux[i] == 'ñ') {
-				listaIndices[numero] = aux[i];
-				numero++;
-			}			
-		}
-		for (int i = 0; i < t1.getContenido().length(); i++) {
-				System.out.println(listaIndices[i]);
-		}
+		StringBuilder texto = new StringBuilder("ñonñraseña ñoña");
+		Texto t1 = new Texto (texto);
+		
+		t1.cambiarLetra("ñ", 'n');
+		
+		System.out.println(t1);
+		
+		t1.eliminarEspacios(" ");
+		System.out.println(t1);
+		
+		
+		StringBuilder nombre = new StringBuilder("pedro");
+		StringBuilder apellido = new StringBuilder("franch");
+		
+		String apellidoCorreo=apellido.substring(0, 3);
+		String nombreCorreo= nombre.substring(0, 3);
+		
+		StringJoiner correo = new StringJoiner("", "", "@gmail.com");
+		correo.add(nombreCorreo);
+		correo.add(apellidoCorreo);
+		System.out.println(correo);
+		
 	}
 }
