@@ -93,15 +93,17 @@ public class Principal {
 		System.out.println(sb4);
 		sb4.deleteCharAt(1);
 		System.out.println(sb4);
-		
+		System.out.println("************");
 		sb4.getChars(0, 5, c2, 1);
-		System.out.println(c2);		
+		System.out.println(c2);	
+		System.out.println("************");
 		
 		System.out.println(sb4.indexOf("d"));
 		System.out.println(sb4.indexOf("Pdroabcdefra"));
 		
 		sb4.insert(2, c2, 3, 4);
 		System.out.println(sb4);
+		
 	}
 
 }
