@@ -29,5 +29,10 @@ public class Principal {
 		correo.add(apellidoCorreo);
 		System.out.println(correo);
 		
+		Correo c1 = new Correo ("Pedro", "Franch");
+		c1.generarCorreo();
+		
+		System.out.println(c1);
+		
 	}
 }
