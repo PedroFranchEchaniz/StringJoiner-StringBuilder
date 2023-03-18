@@ -1,0 +1,80 @@
+package utilidades;
+
+
+import java.io.*;
+
+
+public class Leer{
+	
+ public static String dato()
+  {
+  String sdato=" ";
+  try{
+  	 InputStreamReader isr=new InputStreamReader(System.in);
+  	 BufferedReader flujoE = new BufferedReader(isr);
+  	 sdato=flujoE.readLine();
+  	 }
+  catch (IOException e)
+  	{
+  	System.out.println("Error "+e.getMessage());
+  	}
+  return sdato;
+  
+  } 
+ 
+ public static String leerStringBuilder() {
+	    StringBuilder sb = new StringBuilder();
+	    try {
+	        InputStreamReader isr = new InputStreamReader(System.in);
+	        BufferedReader flujoE = new BufferedReader(isr);
+	        char[] buffer = new char[1024];
+	        int numCharsRead;
+	        while ((numCharsRead = flujoE.read(buffer, 0, buffer.length)) != -1) {
+	            sb.append(buffer, 0, numCharsRead);
+	        }
+	    } catch (IOException e) {
+	        System.out.println("Error " + e.getMessage());
+	    }
+	    return sb.toString();
+	}
+
+ public static int datoInt()
+  {
+  return Integer.parseInt(dato());
+  }
+  
+
+ public static float datoFloat()
+  {
+  return Float.parseFloat(dato());	
+  }
+//Leer un char por teclado
+
+public static char datoChar( ){
+	char c = ' ';
+		try {
+			java.io.BufferedInputStream b = new BufferedInputStream(System.in);
+			 c = (char) b.read();
+		} catch (IOException e) {
+			System.out.println("Error al leer");
+			e.printStackTrace();
+		}
+	return c;
+	}
+  
+ public static long datoLong()
+  {
+  return Long.parseLong(dato());
+  }
+ 
+ public static short datoShort()
+  {
+  return Short.parseShort(dato());	
+  }
+ 
+ public static double datoDouble()
+  {
+  return Double.parseDouble(dato());	
+  }
+  
+}
