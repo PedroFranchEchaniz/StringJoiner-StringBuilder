@@ -11,38 +11,14 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String variable, nombre, apellido;
-		int respuesta = 0;
-
-		System.out.println("Introduzca el nombre de la variable");
-		variable = Leer.dato();
-
-		StringBuilder texto = new StringBuilder(variable);
-		Texto t1 = new Texto(texto);
-
-		t1.cambiarLetra("ñ", 'n');
-
-		System.out.println(t1);
-
-		t1.eliminarEspacios(" ");
-		System.out.println(t1);
-
-		int anio = 0;
-		String extension;
-		StringBuilder nombre2 = new StringBuilder("pedro");
-		StringBuilder apellido2 = new StringBuilder("franch");
-
-		String apellidoCorreo = apellido2.substring(0, 3);
-		String nombreCorreo = nombre2.substring(0, 3);
-
-		StringJoiner correo = new StringJoiner("", "", "@gmail.com");
-		correo.add(nombreCorreo);
-		correo.add(apellidoCorreo);
-		System.out.println(correo);
-
-		Alumno c1 = new Alumno("Pedro", "Franch");
-
-		System.out.println(c1);
+		String variable, nombre, apellido, extension;
+		int respuesta = 0, anio;
+		
+		StringBuilder sb = new StringBuilder("esoEsunStrinBuilder");
+		sb.insert(3, "TTTTTT");
+		
+		
+		System.out.println(sb);
 
 		System.out.println("---------------------------------------------------");
 		Alumno a1 = new Alumno("Pedro", "Franch");
@@ -60,6 +36,7 @@ public class Principal {
 
 			System.out.println("1-Agregar alumno");
 			System.out.println("2-Generar correo para el alumno");
+			System.out.println("3-Ver listado de correos");
 			System.out.println("0-Salir del programa");
 			respuesta = Leer.datoInt();
 			switch (respuesta) {
@@ -72,12 +49,15 @@ public class Principal {
 				listaAlumnos.add(a4);
 				break;
 			case 2:
-				System.out.println("Indique el los dos últimos digitos del año de matricula");
+				System.out.println("Indique los dos últimos digitos del año de matricula");
 				anio = Leer.datoInt();
 				System.out.println("Indique la extension del correo");
 				extension = Leer.dato();
 				salesianos.agregarCorreo(salesianos.generarCorreo(anio, extension));
 				System.out.println(listaAlumnos);
+				break;
+			case 3:
+				salesianos.imprimirListaCorreos(listaAlumnos);
 				break;
 			case 0:
 				System.out.println("Saliendo");

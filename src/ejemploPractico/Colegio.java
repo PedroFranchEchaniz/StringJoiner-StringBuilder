@@ -36,7 +36,7 @@ public class Colegio implements GenerarCorreo, CorregirNombre {
 	public String acortarApellido(int index) {
 		String apellido;		
 		StringBuilder apellidoAcortado = new StringBuilder(listaAlumno.get(index).getApellido());
-		apellido=apellidoAcortado.subSequence(0, 3).toString();
+		apellido=apellidoAcortado.substring(0, 3);
 		return apellido;
 	}
 
@@ -69,5 +69,13 @@ public class Colegio implements GenerarCorreo, CorregirNombre {
 			index = textoaux.indexOf(" ", index + 1);
 		}
 		return textoaux.toString();
+	}
+	
+	public void imprimirListaCorreos (List<Alumno> lista) {
+		StringJoiner listaCorreos = new StringJoiner(",", "[", "]");
+		for (Alumno a : lista) {
+			listaCorreos.add(a.getCorreo());
+		}
+		System.out.println(listaCorreos.toString());
 	}
 }

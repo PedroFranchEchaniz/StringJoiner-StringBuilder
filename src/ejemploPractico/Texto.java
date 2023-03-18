@@ -25,6 +25,14 @@ public class Texto {
 	public String toString() {
 		return "Texto [contenido=" + contenido + "]";
 	}
+	
+	public void imprimirListaCorreos (List<Alumno> lista) {
+		StringJoiner listaCorreos = new StringJoiner(",");
+		for (Alumno a : lista) {
+			listaCorreos.add(a.getCorreo());
+		}
+		System.out.println(listaCorreos);
+	}
 
 	public void cambiarLetra(String letraAcambiar, char letraDeCambio) {
 		int index = contenido.indexOf(letraAcambiar);
