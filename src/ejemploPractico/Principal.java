@@ -11,16 +11,11 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String variable, nombre, apellido, extension;
+		String nombre, apellido, extension;
 		int respuesta = 0, anio;
 		
-		StringBuilder sb = new StringBuilder("esoEsunStrinBuilder");
-		sb.insert(3, "TTTTTT");
 		
 		
-		System.out.println(sb);
-
-		System.out.println("---------------------------------------------------");
 		Alumno a1 = new Alumno("Pedro", "Franch");
 		Alumno a2 = new Alumno("Manuel", "Molina");
 		Alumno a3 = new Alumno("Francisco", "Lebron");
@@ -32,6 +27,9 @@ public class Principal {
 
 		Colegio salesianos = new Colegio(listaAlumnos);
 
+		System.out.println("-----------------------------------------------------------");
+		System.out.println("Bienvenido al gestor de correos electronicso del colegio");
+		System.out.println("-----------------------------------------------------------");
 		do {
 
 			System.out.println("1-Agregar alumno");
