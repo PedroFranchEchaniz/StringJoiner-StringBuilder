@@ -60,9 +60,13 @@ public class Principal {
 			case 0:
 				System.out.println("Saliendo");
 				break;
-
+			default:
+				System.out.println("Opción no encontrada");
+				break;
 			}
 
 		} while (respuesta != 0);
+		
+		System.out.println("Gracias por generar correos con nosotros");
 	}
 }
